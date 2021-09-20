@@ -37,7 +37,7 @@ ${AWS_REGION}
 text
 EOF
 
-if [ -z "$IS_DELETE" ]; then
+if [ -n "$IS_DELETE" ]; then
 # Delete using our dedicated profile and suppress verbose messages.
 # All other flags are optional via the `args:` directive.
 sh -c "aws s3 rm s3://${AWS_S3_BUCKET}/${PATH_TO_DELETE} \
@@ -45,7 +45,7 @@ sh -c "aws s3 rm s3://${AWS_S3_BUCKET}/${PATH_TO_DELETE} \
               ${ENDPOINT_APPEND} $*"
 fi              
 
-if [ -z "$IS_SYNC" ]; then
+if [ -n "$IS_SYNC" ]; then
 # Sync using our dedicated profile and suppress verbose messages.
 # All other flags are optional via the `args:` directive.
 sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS_S3_BUCKET}/${DEST_DIR} \
