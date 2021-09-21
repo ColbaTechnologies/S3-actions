@@ -1,4 +1,4 @@
-# GitHub Action to delete files from S3 Bucket
+# GitHub Action to delete and sync files from S3 Bucket
 
 Fork of [s3-sync-action](https://github.com/jakejarvis/s3-sync-action).
 
