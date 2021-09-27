@@ -3,9 +3,7 @@
 Fork of [s3-sync-action](https://github.com/jakejarvis/s3-sync-action).
 
 This simple action uses the [vanilla AWS CLI](https://docs.aws.amazon.com/cli/index.html) to delete files from a S3 bucket.
-
-## Usage
-
+Added the flags IS_DELETE and IS_SYNC to entryponit, for activate sync or rm actions
 ### `workflow.yml` Example
 
 Place in a `.yml` file such as this one in your `.github/workflows` folder. [Refer to the documentation on workflow YAML syntax here.](https://help.github.com/en/articles/workflow-syntax-for-github-actions)
